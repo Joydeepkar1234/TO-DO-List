@@ -4,23 +4,15 @@ import { TodoContext } from "../context/TodoContext";
 
 const TodoList = () => {
   const [todos] = useContext(TodoContext);
-  const [filter, setFilter] = useState("all"); // "all", "completed", "incomplete"
+  const [filter, setFilter] = useState("completed"); 
 
-  const filteredTodos = todos.filter((todo) => {
-    if (filter === "completed") return todo.completed;
-    if (filter === "incomplete") return !todo.completed;
-    return true; // Show all tasks
-  });
+  const filteredTodos = todos.filter((todo) =>
+    filter === "completed" ? todo.completed : !todo.completed
+  );
 
   return (
     <div>
       <div className="filter-buttons">
-        {/* <button
-          onClick={() => setFilter("all")}
-          className={filter === "all" ? "active-filter" : ""}
-        >
-          All
-        </button> */}
         <button
           onClick={() => setFilter("completed")}
           className={filter === "completed" ? "active-filter" : ""}
@@ -44,7 +36,7 @@ const TodoList = () => {
           />
         ))
       ) : (
-        <h4>No tasks found</h4>
+        <h4>No tasks found.</h4>
       )}
     </div>
   );
