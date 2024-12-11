@@ -4,7 +4,7 @@ import { TodoContext } from "../context/TodoContext";
 
 const TodoList = () => {
   const [todos] = useContext(TodoContext);
-  const [filter, setFilter] = useState("completed"); 
+  const [filter, setFilter] = useState("completed"); ;
 
   const filteredTodos = todos.filter((todo) =>
     filter === "completed" ? todo.completed : !todo.completed
