@@ -9,7 +9,7 @@ export const TodoProvider = (props) => {
   });
 
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem("todos", JSON.stringify(todos));;
   }, [todos]);
 
   return (
