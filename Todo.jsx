@@ -35,7 +35,7 @@ const Todo = ({ id, title, completed }) => {
         value={id}
         onChange={toggleComplete}
       />
-      <label className={completed ? "completed" : ""}>{title}</label>
+      <label>{title}</label>
       <button onClick={() => deleteTodo(id)} className="btn-delete">
         Delete
       </button>
