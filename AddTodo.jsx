@@ -20,7 +20,7 @@ const AddTodo = () => {
   return (
     <div className='form-input-container'>
       <input value={title} className='form-input' onChange={e => setTitle (e.target.value)} placeholder='Add a new task...'/>
-      <button type='button' className='form-btn' onClick={addTodo}>Add</button>
+      <button type='button' className='form-btn' onClick={addTodo}>Create</button>
       
     </div>
   )
